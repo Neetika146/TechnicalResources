@@ -53,7 +53,7 @@ void middleLL(Node* head){
 	}
     Node* f= head;
 	Node* s =head;
-    while(f!=NULL){
+    while(f->next!=NULL && f->next->next!=NULL){
         f=f->next->next;
         s=s->next;
     }
@@ -68,7 +68,7 @@ int main()
 	while (t--)
 	{
 		Node *head = takeinput();
-		kfromend(head,k);
+		middleLL(head);
 	}
 
 	return 0;
